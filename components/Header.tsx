@@ -44,7 +44,16 @@ function Header() {
         <button type="submit" hidden />
       </form>
 
-      <div></div>
+      <div className="flex">
+        <SparklesIcon className="icon" />
+        <GlobeIcon className="icon" />
+        <VideoCameraIcon className="icon" />
+        <hr className="h-10 border border-gray-100" />
+        <ChatIcon className="icon" />
+        <BellIcon className="icon" />
+        <PlusIcon className="icon" />
+        <SpeakerphoneIcon className="icon" />
+      </div>
     </div>
   )
 }
