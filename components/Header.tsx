@@ -44,7 +44,7 @@ function Header() {
         <button type="submit" hidden />
       </form>
 
-      <div className="flex">
+      <div className="mx-5 flex hidden items-center space-x-2 text-gray-500 lg:inline-flex">
         <SparklesIcon className="icon" />
         <GlobeIcon className="icon" />
         <VideoCameraIcon className="icon" />
@@ -53,6 +53,15 @@ function Header() {
         <BellIcon className="icon" />
         <PlusIcon className="icon" />
         <SpeakerphoneIcon className="icon" />
+      </div>
+      <div className="ml-5 flex items-center lg:hidden">
+        <MenuIcon className="icon" />
+      </div>
+
+      <div>
+        <div className="relative h-5 w-5 flex-shrink-0">
+          <Image src="https://links.papareact.com/23l" layout="fill" alt="" />
+        </div>
       </div>
     </div>
   )
