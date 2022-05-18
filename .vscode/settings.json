@@ -1,0 +1,118 @@
+{
+  "workbench.colorTheme": "Community Material Theme Ocean",
+  "workbench.iconTheme": "material-icon-theme",
+  "settingsSync.ignoredExtensions": [],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.mouseWheelZoom": true,
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": { "path": "C:\\Program Files\\Git\\bin\\bash.exe" }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "workbench.startupEditor": "none",
+  "git.autofetch": true,
+
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "xml",
+    "php",
+    "javascript",
+    "typescript"
+  ],
+  "editor.minimap.enabled": false,
+  "emmet.triggerExpansionOnTab": true,
+  "files.associations": { "*html": "html" },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+    "vue-html": "html",
+    "razor": "html",
+    "plaintext": "jade"
+  },
+  "reactSnippets.settings.prettierEnabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.formatOnSave": true,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "javascript.suggest.autoImports": true,
+  "javascript.autoClosingTags": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.suggest.showMethods": true,
+  "prettier.printWidth": 80,
+  "prettier.singleQuote": false,
+  "prettier.jsxSingleQuote": false,
+  "prettier.semi": true,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.tabWidth": 2,
+  "editor.wordWrap": "on",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code','Operator Mono Lig', Menlo, Monaco,Consolas, 'Courier New', monospace",
+
+  "auto-close-tag.enableAutoCloseTag": true,
+  "auto-close-tag.enableAutoCloseSelfClosingTag": true,
+  "auto-close-tag.insertSpaceBeforeSelfClosingTag": false,
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (Eex)",
+    "tsx",
+    "ts"
+  ],
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.showHiddenFiles": true,
+  "path-intellisense.autoSlashAfterDirectory": false,
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "path-intellisense.absolutePathToWorkspace": true,
+  "path-intellisense.mappings": {
+    "/": "${workspaceFolder}",
+    "lib": "${workspaceFolder}/lib",
+    "global": "/Users/dummy/globalLibs"
+  },
+  "editor.linkedEditing": true,
+  "workbench.activityBar.visible": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "javascript.format.enable": false,
+  "compile-hero": {
+    "disable-compile-files-on-did-save-code": false,
+    "notification-toggle": false,
+    "javascript-output-directory": "./out",
+    "javascript-output-toggle": false,
+    "sass-output-directory": "./out",
+    "sass-output-toggle": true,
+    "ignore": ["src/test.js", "*/test.scss", "**/spec/*", "**/src/**/*"],
+    "watch": ["sass/test.sass", "**/less/**/*"]
+  }
+}
