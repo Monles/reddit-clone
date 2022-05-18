@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <div className="">
       <Head>
-        <title>Rediit 2.0</title>
+        <title>Reddit 2.0</title>
       </Head>
       <Header />
     </div>

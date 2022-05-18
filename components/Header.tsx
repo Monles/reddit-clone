@@ -25,6 +25,12 @@ function Header() {
         <p className="ml-2 hidden flex-1 lg:inline">Home</p>
         <ChevronDownIcon className="h-5 w-5" />
       </div>
+
+      <form className="flex flex-1 items-center space-x-2 rounded-sm border border-gray-200">
+        <SearchIcon className="h-6 w-6 text-gray-400" />
+        <input type="text" placeholder="Search Reddit" />
+        <button type="submit" hidden />
+      </form>
     </div>
   )
 }
