@@ -58,10 +58,16 @@ function Header() {
         <MenuIcon className="icon" />
       </div>
 
-      <div>
+      <div className="hidden items-center space-x-2 border border-gray-100 p-2 lg:flex ">
         <div className="relative h-5 w-5 flex-shrink-0">
-          <Image src="https://links.papareact.com/23l" layout="fill" alt="" />
+          <Image
+            objectFit="contain"
+            src="https://links.papareact.com/23l"
+            layout="fill"
+            alt=""
+          />
         </div>
+        <p className="text-gray-400">Sign In</p>
       </div>
     </div>
   )
