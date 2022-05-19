@@ -5,14 +5,14 @@ import PostBox from '../components/PostBox'
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div className="my-7 mx-auto max-w-5xl">
       <Head>
         <title>Reddit 2.0</title>
       </Head>
 
       <PostBox />
 
-      <div>Hey Hey Hey</div>
+      <div className="flex"></div>
     </div>
   )
 }
