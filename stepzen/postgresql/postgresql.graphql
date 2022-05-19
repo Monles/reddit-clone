@@ -44,7 +44,7 @@ type Query {
     @dbquery(
       type: "postgresql"
       query: """
-      select * from "subreddit" where "topic" =  $1
+      select * from "comment" limit $1 offset $2
       """
       configuration: "postgresql_config"
     )
