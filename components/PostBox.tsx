@@ -8,6 +8,7 @@ import { useMutation } from '@apollo/client'
 import { ADD_POST, ADD_SUBREDDIT } from '../graphql/mutations'
 import client from '../apollo-client'
 import { GET_SUBREDDIT_BY_TOPIC } from '../graphql/queries'
+import toast from 'react-hot-toast'
 
 type FormData = {
   postTitle: string
@@ -32,6 +33,7 @@ function PostBox() {
 
   const onSubmit = handleSubmit(async (formData) => {
     console.log(formData)
+    const notification = toast.loading('Creating new post...')
 
     try {
       const {
@@ -46,9 +48,64 @@ function PostBox() {
       const subredditExists = getSubredditListByTopic.length > 0
 
       if (!subredditExists) {
+        console.log('Subreddit is new -> creating a NEW subreddit!')
+
+        const {
+          data: { insertSubreddit: newSubreddit },
+        } = await addSubreddit({
+          variables: {
+            topic: formData.subreddit,
+          },
+        })
+
+        console.log('Creating post...', formData)
+        const image = formData.postImage || ''
+
+        const {
+          data: { insertPost: newPost },
+        } = await addPost({
+          variables: {
+            body: formData.postBody,
+            image: image,
+            subreddit: newSubreddit.id,
+            title: formData.postTitle,
+            username: session?.user?.name,
+          },
+        })
+
+        console.log('New post added:', newPost)
       } else {
+        console.log('Using existing subreddit!')
+        console.log(getSubredditListByTopic)
+
+        const image = formData.postImage || ''
+
+        const {
+          data: { insertPost: newPost },
+        } = await addPost({
+          variables: {
+            body: formData.postBody,
+            image: image,
+            subreddit: getSubredditListByTopic[0].id,
+            title: formData.postTitle,
+            username: session?.user?.name,
+          },
+        })
+        console.log('New post added:', newPost)
       }
-    } catch (error) {}
+      setValue('postBody', '')
+      setValue('postImage', '')
+      setValue('postTitle', '')
+      setValue('subreddit', '')
+
+      toast.success('New Post Created', {
+        id: notification,
+      })
+    } catch (error) {
+      toast.error('Whoops something went wrong!', {
+        id: notification,
+      })
+    }
   })
 
   return (

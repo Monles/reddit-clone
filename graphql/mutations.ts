@@ -27,8 +27,11 @@ export const ADD_POST = gql`
 `
 
 export const ADD_SUBREDDIT = gql`
-  mutation MyMutation($topic: $topic){
+  mutation MyMutation($topic: String!) {
+    insertSubreddit(topic: $topic) {
       id
-      topic 
+      topic
       created_at
-  }`
+    }
+  }
+`

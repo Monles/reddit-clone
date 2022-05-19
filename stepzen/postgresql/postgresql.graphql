@@ -22,6 +22,14 @@ type Subreddit {
   topic: String
 }
 
+type Vote {
+  created_at: DateTime
+  id: ID!
+  post_id: ID
+  upvote: Int
+  username: String
+}
+
 type Query {
   getCommentList: [Comment]
     @dbquery(
@@ -36,7 +44,7 @@ type Query {
     @dbquery(
       type: "postgresql"
       query: """
-      select * from "comment" limit $1 offset $2
+      select * from "subreddit" where "topic" =  $1
       """
       configuration: "postgresql_config"
     )
